@@ -9,7 +9,7 @@ const poppinsFont = Poppins({
 
 export const metadata: Metadata = {
   title: "PEAK TRAVELS",
-  description: "TRAVEL AGENCY APP",
+  description: "TRAVEL AGENCY LANDING PAGE WITH NEXT JS 15",
 };
 
 export default function RootLayout({
