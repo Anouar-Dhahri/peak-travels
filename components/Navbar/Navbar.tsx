@@ -6,7 +6,7 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 
 const Navbar = () => {
   return (
-    <div className="bg-blue-950 transition-all duration-200 h-[12vh] z-[1000]">
+    <div className="bg-blue-950 transition-all duration-200 h-[12vh] z-[1000] fixed w-full">
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
         {/** LOGO */}
         <div className="flex item-center space-x-2">
@@ -36,7 +36,7 @@ const Navbar = () => {
           <button className="md:px-12 md:py-2.5 px-8 py-2 text-black text-base bg-white hover:bg-gray-200 transition-all duration-200 rounded-lg cursor-pointer">
             Book Now
           </button>
-
+          {/** RESPONSIVE */}
           <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-white lg:hidden" />
         </div>
       </div>
