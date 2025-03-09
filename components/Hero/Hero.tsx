@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBox from "../Helper/SearchBox";
 
 const Hero = () => {
   return (
@@ -18,12 +19,14 @@ const Hero = () => {
         <div className="flex items-center justify-center flex-col w-full h-full">
           <div>
             <h1 className=" text-[25px] mb-4 md:mb-0 text-center md:text-[35px] lg:text-[45px] tracking-[0.7rem] text-white font-bold uppercase">
-              Let&apos;s Enjoy the nature
+              Let&apos;s Explore the world
             </h1>
             <p className="md:text-base text-center text-lg text-white font-normal [word-spacing:5px]">
               Get the best prices of 2,000,000+ properties,worldwide{" "}
             </p>
           </div>
+          {/** SEARCH BOX */}
+          <SearchBox />
         </div>
       </div>
     </div>

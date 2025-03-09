@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Helper = () => {
+const SearchBox = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Helper = () => {
   )
 }
 
-export default Helper
+export default SearchBox
