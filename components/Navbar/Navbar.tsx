@@ -1,7 +1,7 @@
 "use client";
 import { navLinks } from "@/constants";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GiMountainRoad } from "react-icons/gi";
 import { HiBars3BottomRight } from "react-icons/hi2";
 
@@ -10,11 +10,27 @@ type Props = {
 };
 
 const Navbar = ({ handleNavShow }: Props) => {
+  const [navBg, setNavBg] = useState(false);
+  useEffect(() => {
+    const handler = () => {
+      if (window.scrollY >= 90) {
+        setNavBg(true);
+      } else {
+        setNavBg(false);
+      }
+      window.addEventListener("scroll", handler);
+      return () => window.removeEventListener("scroll", handler);
+    };
+  }, []);
+
   return (
-    <div className="bg-blue-950 transition-all duration-200 h-[12vh] z-[1000] fixed w-full">
+    <div
+      className={`${
+        navBg ? "bg-blue-950 shadow-md" : "fixed"
+      } transition-all duration-200 h-[12vh] z-[1000] fixed w-full`}>
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
         {/** LOGO */}
-        <div className="flex item-center space-x-2">
+        <div className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center flex-col">
             <GiMountainRoad className="w-6 h-6 text-white" />
           </div>
