@@ -18,9 +18,9 @@ const Navbar = ({ handleNavShow }: Props) => {
       } else {
         setNavBg(false);
       }
-      window.addEventListener("scroll", handler);
-      return () => window.removeEventListener("scroll", handler);
     };
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
   }, []);
 
   return (
