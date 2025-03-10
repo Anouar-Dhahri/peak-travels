@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBox from "../Helper/SearchBox";
+import { CiSearch } from "react-icons/ci";
 
 const Hero = () => {
   return (
@@ -27,6 +28,12 @@ const Hero = () => {
           </div>
           {/** SEARCH BOX */}
           <SearchBox />
+          <button className="flex items-center w-[200px]  h-12 bg-yellow-500 rounded-lg text-center flex-row -mt-6 justify-center space-x-2 cursor-pointer hover:bg-[#222] hover:scale-110 hover:text-white transition-all duration-300">
+            <span>
+              <CiSearch className="w-6 h-6" />
+            </span>
+            <span className="text-bold text-lg">Search</span>
+          </button>
         </div>
       </div>
     </div>
