@@ -1,4 +1,6 @@
 import React from "react";
+import SearchBox from "../Helper/SearchBox";
+import { CiSearch } from "react-icons/ci";
 
 const Hero = () => {
   return (
@@ -18,12 +20,20 @@ const Hero = () => {
         <div className="flex items-center justify-center flex-col w-full h-full">
           <div>
             <h1 className=" text-[25px] mb-4 md:mb-0 text-center md:text-[35px] lg:text-[45px] tracking-[0.7rem] text-white font-bold uppercase">
-              Let&apos;s Enjoy the nature
+              Let&apos;s Explore the world
             </h1>
             <p className="md:text-base text-center text-lg text-white font-normal [word-spacing:5px]">
               Get the best prices of 2,000,000+ properties,worldwide{" "}
             </p>
           </div>
+          {/** SEARCH BOX */}
+          <SearchBox />
+          <button className="flex items-center w-[200px]  h-12 bg-yellow-500 rounded-lg text-center flex-row -mt-6 justify-center space-x-2 cursor-pointer hover:bg-[#222] hover:scale-110 hover:text-white transition-all duration-300">
+            <span>
+              <CiSearch className="w-6 h-6" />
+            </span>
+            <span className="text-bold text-lg">Search</span>
+          </button>
         </div>
       </div>
     </div>
