@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBox from "../Helper/SearchBox";
+import SearchBox from "@/components/SearchBox/SearchBox";
 import { CiSearch } from "react-icons/ci";
 
 const Hero = () => {
