@@ -1,6 +1,7 @@
 import React from "react";
-import SectionHeading from "../../../components/SeactionHeader/SectionHeading";
-import DestinationSlider from "../../../components/Slider/Slider";
+import SectionHeading from "@/components/SeactionHeader/SectionHeading";
+import Slider from "@/components/Slider/Slider";
+import { destinationData } from "@/data";
 
 const Destination = () => {
   return (
@@ -10,7 +11,9 @@ const Destination = () => {
         description="Lorem ipsum dolor sit amet consectetur."
       />
       <div className="mt-14 w-[80%] mx-auto">
-        <DestinationSlider />
+        {destinationData && destinationData?.length > 0 && (
+          <Slider data={destinationData} />
+        )}
       </div>
     </div>
   );
