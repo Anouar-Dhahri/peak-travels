@@ -12,8 +12,12 @@ const Hotels = () => {
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, non?"
       />
       <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-center mt-16">
-        {hotelsData?.map((item) => (
-          <div key={item.id}>
+        {hotelsData?.map((item, index) => (
+          <div
+            key={item.id}
+            data-aos="fade-right"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay={`${index * 100}`}>
             <Card hotel={item} />
           </div>
         ))}
